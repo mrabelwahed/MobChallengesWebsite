@@ -7,13 +7,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDsacpE-d5JxaWbg-aU92uSb5P9oKHtYgg",
-  authDomain: "mobchallenges.firebaseapp.com",
-  projectId: "mobchallenges",
-  storageBucket: "mobchallenges.appspot.com",
-  messagingSenderId: "919474502172",
-  appId: "1:919474502172:web:8f70f25ca0193f4b897dd9",
-  measurementId: "G-MRRZLP7GTQ",
+  // your config obj
 };
 
 const app = initializeApp(firebaseConfig);
