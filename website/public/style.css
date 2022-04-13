@@ -1,0 +1,324 @@
+@import url("https://fonts.google.com/specimen/Nunito+Sans");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1 span {
+  color: crimson;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  /* max-width: 1200px;
+  margin: 0 auto !important;
+  float: none !important; */
+
+  --bgcolor: hsl(0, 0%, 98%);
+  --fontcolor: hsl(200, 15%, 8%);
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.dark {
+  --bgcolor: hsl(207, 26%, 17%);
+  --fontcolor: hsl(0, 0%, 98%);
+  background: var(--bgcolor);
+  color: var(--fontcolor) !important;
+  --challengebgcolor: hsl(209, 23%, 22%);
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container:nth-child(1) {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  background: var(--challengebgcolor);
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  color: var(--fontcolor);
+}
+
+.toggle {
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--fontcolor);
+}
+.toggle i {
+  padding-right: 5px;
+}
+
+.form-control {
+  width: 400px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  background: var(--challengebgcolor);
+  margin-right: 10px;
+}
+
+.form-control input {
+  width: 100%;
+  outline: 0;
+  border: 0;
+  font-size: 16px;
+  padding: 17px 10px;
+  letter-spacing: 0.5px;
+  background: transparent;
+  color: var(--fontcolor);
+}
+
+.form-control i {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.dropDownCon {
+  width: 200px;
+  position: relative;
+  background: var(--challengebgcolor);
+  border-radius: 5px;
+}
+.dropDown {
+  width: 100%;
+  padding: 17px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 15px;
+  background: var(--challengebgcolor);
+  color: var(--fontcolor);
+}
+.dropDown p {
+  letter-spacing: 0.5;
+}
+.dropDown i {
+  cursor: pointer;
+}
+
+.drop {
+  position: absolute;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  top: 4rem;
+  padding: 17px 10px;
+  width: 100%;
+  border-radius: 5px;
+  background: var(--bgcolor);
+  cursor: pointer;
+}
+
+.drop p {
+  margin: 5px 0;
+}
+
+.challenges {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.challenge {
+  min-height: 350px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  border-radius: 5px;
+  background: var(--challengebgcolor);
+}
+
+.challenge-img {
+  height: 250px;
+}
+
+.challenge-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.challenge-info {
+  padding: 20px 17px;
+}
+.challenge-info h5 {
+  padding: 8px 0px;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+.challenge-info p {
+  letter-spacing: 1px;
+}
+.challenge-info p > strong {
+  font-weight: 600;
+}
+
+.showDropDown {
+  display: none;
+}
+
+.sidebar {
+  background: var(--challengebgcolor);
+  width: 25%;
+}
+
+.week-challenge {
+  border: 1px solid darkolivegreen;
+  margin: 30px;
+  padding: 20px;
+}
+
+.quiz {
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--fontcolor);
+}
+
+.quiz i {
+  padding-right: 8px;
+}
+
+/* Dropdown Button */
+.quiz-btn-drop {
+  color: var(--fontcolor);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  margin-right: 30px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.quiz-list-content {
+  display: none;
+  position: absolute;
+  background-color: var(--bgcolor);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.quiz-list-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: var(--fontcolor);
+}
+
+/* Change color of dropdown links on hover */
+.quiz-list-content a:hover {
+  background-color: var(--challengebgcolor);
+}
+
+/* Show the dropdown menu on hover */
+.quiz-list-dropdown:hover .quiz-list-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.quiz-list-dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.header-right-side {
+  display: flex;
+}
+
+.challenge-modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: var(--bgcolor);
+  padding: 30px;
+}
+
+.modal {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.back {
+  position: absolute;
+  top: 3rem;
+  left: 40px;
+  background-color: #fdfdfd;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--challengebgcolor);
+}
+
+.left-modal {
+  width: 50%;
+}
+.left-modal img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.right-modal {
+  width: 100%;
+  margin-left: 40px;
+}
+
+.right-modal h1 {
+  margin: 10px 0;
+  letter-spacing: 1px;
+  font-size: 40px;
+  display: block;
+}
+.modal-info {
+  display: flex;
+}
+.inner p {
+  letter-spacing: 1px;
+  margin: 13px 0;
+}
+.inner p > strong {
+  font-weight: 600;
+}
+.inner-left {
+  margin-right: 100px;
+}
+
+.show {
+  display: none;
+}
+
+.desc {
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 2rem;
+  color: var(--fontcolor);
+}
+
+.desc h3 {
+  margin: 10px 0;
+}
